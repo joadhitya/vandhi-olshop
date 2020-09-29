@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- All CSS -->
-    <link rel="stylesheet"href="{{URL::asset('client/css/bootstrap.min.css')}}">
-    <link rel="stylesheet"href="{{URL::asset('client/css/themify-icons.css')}}">
-    <link rel="stylesheet"href="{{URL::asset('client/css/owl.carousel.min.css')}}">
-    {{-- {{URL::asset('admin/assets/plugins/nprogress/nprogress.css')}} --}}
-    <link rel="stylesheet" href="{{URL::asset('client/css/style.css')}}">
+    <link rel="stylesheet"href="{{asset('client/css/bootstrap.min.css')}}">
+    <link rel="stylesheet"href="{{asset('client/css/themify-icons.css')}}">
+    <link rel="stylesheet"href="{{asset('client/css/owl.carousel.min.css')}}">
+    {{-- {{asset('admin/assets/plugins/nprogress/nprogress.css')}} --}}
+    <link rel="stylesheet" href="{{asset('client/css/style.css')}}">
 
     <title>Vandhi Olshop</title>
   </head>
@@ -24,7 +24,7 @@
           <!-- Site logo -->
           <a href="home-01.html" class="logo">
             <h2>Vanol<span style="color:#ff5353">shop</span></h2>
-            {{-- <img src="{{URL::asset('client/images/logo.png')}}" alt=""> --}}
+            {{-- <img src="{{asset('client/images/logo.png')}}" alt=""> --}}
           </a>
           <a href="javascript:void(0);" id="mobile-menu-toggler">
             <i class="ti-align-justify"></i>
@@ -60,7 +60,7 @@
           </div>
           <div class="col-md-6 order-0 order-md-1">
             <div class="ban-img">
-              <img src="{{URL::asset('client/images/ban-1.png')}}" alt="">
+              <img src="{{asset('client/images/ban-1.png')}}" alt="">
             </div>
           </div>
         </div>        
@@ -82,7 +82,7 @@
           <div class="col-sm-4">
             <div class="product-item">
               <figure class="product-thumb">
-                <img src="{{URL::asset('client/images/products/1.jpg')}}" alt="">
+                <img src="{{asset('client/images/products/1.jpg')}}" alt="">
                 <div class="action-links">
                   <a href="#" class="quick-view icon"><i class="ti-eye"></i></a>
                   <a href="#" class="wishlist icon"><i class="ti-heart"></i></a>
@@ -105,7 +105,7 @@
           <div class="col-sm-4">
             <div class="product-item">
               <figure class="product-thumb">
-                <img src="{{URL::asset('client/images/products/2.jpg')}}" alt="">
+                <img src="{{asset('client/images/products/2.jpg')}}" alt="">
                 <div class="action-links">
                   <a href="#" class="quick-view icon"><i class="ti-eye"></i></a>
                   <a href="#" class="wishlist icon"><i class="ti-heart"></i></a>
@@ -128,7 +128,7 @@
           <div class="col-sm-4">
             <div class="product-item">
               <figure class="product-thumb">
-                <img src="{{URL::asset('client/images/products/3.jpg')}}" alt="">
+                <img src="{{asset('client/images/products/3.jpg')}}" alt="">
                 <div class="action-links">
                   <a href="#" class="quick-view icon"><i class="ti-eye"></i></a>
                   <a href="#" class="wishlist icon"><i class="ti-heart"></i></a>
@@ -166,7 +166,7 @@
           </div>
           <div class="col-md-6">
             <div class="ban-img">
-              <img src="{{URL::asset('client/images/ban-2.png')}}" alt="">
+              <img src="{{asset('client/images/ban-2.png')}}" alt="">
             </div>
           </div>
         </div>        
@@ -180,28 +180,28 @@
         <div class="row">
           <div class="col-md-3 col-sm-6">
             <div class="featureBox">
-              <img src="{{URL::asset('client/images/feature-icons/1.png')}}" alt="Cash" class="feat-icon">
+              <img src="{{asset('client/images/feature-icons/1.png')}}" alt="Cash" class="feat-icon">
               <h5>Money back gurantee</h5>
               <p>Great fill signs he evening</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="featureBox">
-              <img src="{{URL::asset('client/images/feature-icons/2.png')}}" alt="Delivery" class="feat-icon">
+              <img src="{{asset('client/images/feature-icons/2.png')}}" alt="Delivery" class="feat-icon">
               <h5>Free Delivery</h5>
               <p>Great fill signs he evening</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="featureBox">
-              <img src="{{URL::asset('client/images/feature-icons/3.png')}}"alt="Support" class="feat-icon">
+              <img src="{{asset('client/images/feature-icons/3.png')}}"alt="Support" class="feat-icon">
               <h5>Alway support</h5>
               <p>Great fill signs he evening</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="featureBox">
-              <img src="{{URL::asset('client/images/feature-icons/4.png')}}" alt="Secure payment" class="feat-icon">
+              <img src="{{asset('client/images/feature-icons/4.png')}}" alt="Secure payment" class="feat-icon">
               <h5>Secure payment</h5>
               <p>Great fill signs he evening</p>
             </div>
@@ -253,10 +253,10 @@
 
 
     <!-- JS -->
-    <script src="{{URL::asset('client/js/jquery-3.3.1.min.js')}}"></script>
-    <script src="{{URL::asset('client/js/jquery-ui.min.js')}}"></script>
-    <script src="{{URL::asset('client/js/bootstrap.min.js')}}"></script>
-    <script src="{{URL::asset('client/js/owl.carousel.min.js')}}"></script>
-    <script src="{{URL::asset('client/js/scripts.js')}}"></script>
+    <script src="{{asset('client/js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{asset('client/js/jquery-ui.min.js')}}"></script>
+    <script src="{{asset('client/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('client/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('client/js/scripts.js')}}"></script>
   </body>
 </html>
