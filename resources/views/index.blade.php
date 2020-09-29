@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- All CSS -->
-    <link rel="stylesheet"href="{{URL::secure_asset('client/css/bootstrap.min.css')}}">
-    <link rel="stylesheet"href="{{URL::secure_asset('client/css/themify-icons.css')}}">
-    <link rel="stylesheet"href="{{URL::secure_asset('client/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet"href="{{URL::asset('client/css/bootstrap.min.css')}}">
+    <link rel="stylesheet"href="{{URL::asset('client/css/themify-icons.css')}}">
+    <link rel="stylesheet"href="{{URL::asset('client/css/owl.carousel.min.css')}}">
     {{-- {{URL::asset('admin/assets/plugins/nprogress/nprogress.css')}} --}}
-    <link rel="stylesheet" href="{{URL::secure_asset('client/css/style.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('client/css/style.css')}}">
 
     <title>Vandhi Olshop</title>
   </head>
@@ -253,10 +253,10 @@
 
 
     <!-- JS -->
-    <script src="{{URL::secure_asset('client/js/jquery-3.3.1.min.js')}}"></script>
-    <script src="{{URL::secure_asset('client/js/jquery-ui.min.js')}}"></script>
-    <script src="{{URL::secure_asset('client/js/bootstrap.min.js')}}"></script>
-    <script src="{{URL::secure_asset('client/js/owl.carousel.min.js')}}"></script>
-    <script src="{{URL::secure_asset('client/js/scripts.js')}}"></script>
+    <script src="{{URL::asset('client/js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{URL::asset('client/js/jquery-ui.min.js')}}"></script>
+    <script src="{{URL::asset('client/js/bootstrap.min.js')}}"></script>
+    <script src="{{URL::asset('client/js/owl.carousel.min.js')}}"></script>
+    <script src="{{URL::asset('client/js/scripts.js')}}"></script>
   </body>
 </html>
