@@ -8,7 +8,7 @@
                 <h2>Tambah Produk</h2>
             </div>
             <div class="card-body">
-                <form class="needs-validation" method="post" action="{{route('product.save')}}" enctype="multipart/form-data" novalidate="">
+                <form class="" method="post" action="{{route('product.save')}}" enctype="multipart/form-data" >
                     @csrf
                     <div class="form-row">
                         <div class="col-md-2 mb-3">
@@ -24,26 +24,29 @@
                         <div class="col-md-3 mb-3">
                             <label for="">Kategori</label>
                             <select class="form-control" name="id_category" required id="id_category"
-                                onchange="get_sub_cat('subcategory')">
-                                <option value="0">Select Category</option>
+                                onchange="getSubcategory()">
+                                <option value="">Select Category</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{$category->id}}">{{$category->category_name}}</option>                                    
+                                @endforeach
                             </select>
-                        </divp>
+                        </div>
 
                         <div class="col-md-3 mb-3">
                             <label for="">Subkategori</label>
                             <select class="form-control" name="id_subcategory" required id="id_subcategory">
-                                <option value="0">Select Sub Category</option>
+                                <option value="">Select Sub Category</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-row">
-                        <div class="col-md-3 mb-3">
+                        <div class="col-md-4 mb-3">
                             <label for="">Harga Produk</label>
                             <input type="text" class="form-control" id="product_price" name="product_price" placeholder="" value=""
                                 required="">
                         </div>
-                        <div class="col-md-2 mb-3">
+                        <div class="col-md-1 mb-3">
                             <label for="">Stock</label>
                             <input type="text" class="form-control" id="product_stock" name="product_stock" placeholder="" value=""
                                 required="">

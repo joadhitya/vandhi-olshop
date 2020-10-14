@@ -4,8 +4,8 @@
     <div class="col-lg-12">
         <div class="card card-default">
             <div class="card-header card-header-border-bottom justify-content-between">
-                <h2>Category</h2>
-                <button type="button" class="btn btn-primary" data-target="#add-category" data-toggle="modal">+ Add
+                <h2>Kategori</h2>
+                <button type="button" class="btn btn-primary" data-target="#add-category" data-toggle="modal">+ Tambah
                     Data</button>
             </div>
             <div class="card-body">
@@ -16,7 +16,7 @@
                         <th>Nama Kategori</th>
                         <th>Slug</th>
                         <th>Deskripsi</th>
-                        <th style="width:14%">Action</th>
+                        <th style="width:13%">Aksi</th>
                     </thead>
                     <tbody id="data-category">
                         
@@ -126,6 +126,7 @@
         </div>
     </div>
 </div>
+
 @endsection
 
 @push('page-scripts')

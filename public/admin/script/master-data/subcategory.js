@@ -60,7 +60,8 @@ function editData(id) {
             $("#subcategory_name").val(data[0].subcategory_name);
             $("#subcategory_slug").val(data[0].subcategory_slug);
             $("#subcategory_description").val(data[0].subcategory_description);
-            $("#id_subcategory").val(data[0].id);
+            $("#id_category").val(data[0].id_category);
+            $("#id_subcategory").val(data[0].id_subcategory);
             $("#edit-subcategory").modal('show');
         },
         error: function (err) {

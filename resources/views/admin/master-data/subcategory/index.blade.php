@@ -5,7 +5,7 @@
         <div class="card card-default">
             <div class="card-header card-header-border-bottom justify-content-between">
                 <h2>Subkategori</h2>
-                <button type="button" class="btn btn-primary" data-target="#add-subcategory" data-toggle="modal">+ Add
+                <button type="button" class="btn btn-primary" data-target="#add-subcategory" data-toggle="modal">+ Tambah
                     Data</button>
             </div>
             <div class="card-body">
@@ -17,7 +17,7 @@
                         <th>Kategori</th>
                         <th>Slug</th>
                         <th>Deskripsi</th>
-                        <th style="width:14%">Action</th>
+                        <th style="width:13%">Aksi</th>
                     </thead>
                     <tbody id="data-subcategory">
                         

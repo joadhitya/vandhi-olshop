@@ -42,6 +42,7 @@ $("#save-data-category").on('click', async (e) => {
 })
   
 function editData(id) {
+    alert(id)
     $.ajax({
         url: `/admin/master-data/category/${id}`,
         method: 'get',
@@ -64,7 +65,8 @@ function editData(id) {
 
 $("#update-data-category").on('click', function (e) {
     e.preventDefault();
-    id = $("#id_subcategory").val();
+    id = $("#id_category").val();
+    alert(id)
     formData = $("#form-edit-category").serialize();
     $.ajax({
         url: `/admin/master-data/category/${id}`,

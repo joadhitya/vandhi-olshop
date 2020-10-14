@@ -7,11 +7,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
+use File;
+
 use App\Category;
 use App\Subcategory;
 use App\Product;
 
-use File;
 class ProductController extends Controller
 {
 
@@ -22,13 +23,6 @@ class ProductController extends Controller
 
     public function display(){    
         $products = Product::get();
-                    // ->join('categories', 'categories.id', '=', 'products.category')
-                    // ->join('subcategories', 'subcategories.id', '=', 'products.subcategory')
-                    // ->select('products.*', 'categories.category_name', 'subcategories.subcategory_name')
-                    // ->get();
-        // echo json_encode($products);
-        // die;
-
         $html = '';
         $no = 1;
         foreach($products as $data){
@@ -36,7 +30,7 @@ class ProductController extends Controller
             $html .= '<td>'.$no++.'</td>';
             $html .= '<td>'.$data->product_code.'</td>';
             $html .= '<td>'.$data->product_name.'</td>';
-            $html .= '<td>'.$data->product_price.'</td>';
+            $html .= '<td>Rp. '.number_format($data->product_price).'</td>';
             $html .= '<td>'.$data->product_stock.'</td>';
             $html .= '<td><img style="width:50px" src="../../storage/'.$data->product_image.'" /></td>';
             $html .= '<td>
@@ -48,23 +42,23 @@ class ProductController extends Controller
             }
         
         if($html == ''){
-            $html .= '<tr ><td class="text-center" colspan="6"><h6 class="mt-2">Tidak terdapat data kategori</h6></td></tr>';
+            $html .= '<tr ><td class="text-center" colspan="7"><h6 class="mt-2">Tidak terdapat data kategori</h6></td></tr>';
          }
          echo $html;
     }
 
     public function create()
     {
-        return view('admin.master-data.product.form');
+        $categories =  Category::get();
+        return view('admin.master-data.product.form', ['categories' => $categories]);
     }
 
     public function store(Request $request)
     {
-        $data = $request->all();
-        $img = $data['product_image'] = $request->file('product_image')->store(
+        $data = $request->all();        
+        $img =  $data['product_image'] = $request->file('product_image')->store(
             'assets/product', 'public'
-        );
-
+        );     
 
         DB::table('products')->insert([
             [
@@ -84,6 +78,13 @@ class ProductController extends Controller
         return view('admin.master-data.product.index');
     }
 
+    public function getSubcategory($id)
+    {
+        $subcategories = Subcategory::where('id_category', $id)->get();
+        echo json_encode($subcategories);
+        
+        
+    }
     public function show($id)
     {
         //
@@ -101,6 +102,7 @@ class ProductController extends Controller
 
     public function destroy($id)
     {
-        //
+        Product::destroy($id);    
+        echo 'Sukses menghapus data Produk';  
     }
 }

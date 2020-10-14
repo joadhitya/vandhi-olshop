@@ -75,7 +75,7 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
         $response[] = array(
-            "id"=>$category->id,
+            "id_category"=>$category->id,
             "category_code"=>$category->category_code,
             "category_name"=>$category->category_name,
             "category_slug"=>$category->category_slug,

@@ -85,7 +85,7 @@ class SubcategoryController extends Controller
     {
         $subcategory = Subcategory::findOrFail($id);
         $response[] = array(
-            "id"=>$subcategory->id,
+            "id_subcategory"=>$subcategory->id,
             "subcategory_code"=>$subcategory->subcategory_code,
             "subcategory_name"=>$subcategory->subcategory_name,
             "subcategory_slug"=>$subcategory->subcategory_slug,
